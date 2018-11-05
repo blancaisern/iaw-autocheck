@@ -9,7 +9,8 @@ public abstract class Product {
     private String place;
 
 
-    private ProductType productType
+    private ProductType productType;
+
 
     public String getName() {
         return name;
@@ -33,5 +34,13 @@ public abstract class Product {
     }
     public void setPlace(String place) {
         this.place = place;
+    }
+
+    public ProductType getProductType() {
+        return productType;
+    }
+
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
     }
 }
