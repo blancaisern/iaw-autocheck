@@ -27,20 +27,20 @@
         }
 
         /* addProduct */
-        //@RequestMapping(method = RequestMethod.POST, value = "/addActivity")
-        //public void addActivity(@RequestBody Product p){DataHelper.add(p);}
-
         @RequestMapping("/addActivity")
         public List<Product> addActivity(
-                @RequestParam(value = "name", defaultValue = StringUtils.EMPTY) String name
-        ) {
+                @RequestParam(value = "id", defaultValue = StringUtils.EMPTY)String id,
+                    @RequestParam(value="name", defaultValue = StringUtils.EMPTY) String name,
+                        @RequestParam(value="price", defaultValue = StringUtils.EMPTY) Double price)
+        {
             //StringUtils.equals(ActivityType.MUSEUM.toString(),"MUSEUM")
             Activity aux = new Activity();
+            aux.setId(id);
             aux.setName(name);
+            aux.setPrice(price);
             DataHelper.add(aux);
             return DataHelper.getProducts();
         }
-
 
         /*  */
         @RequestMapping("/getEnum")
