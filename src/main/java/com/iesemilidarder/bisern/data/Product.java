@@ -1,13 +1,10 @@
 package com.iesemilidarder.bisern.data;
 
-import java.nio.DoubleBuffer;
-
 public abstract class Product {
     private String name;
     private Double price;
     private String numPeople;
     private String place;
-
 
     private ProductType productType;
 
