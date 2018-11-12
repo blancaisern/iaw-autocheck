@@ -7,6 +7,11 @@ import java.util.List;
 
 public class DataHelper {
 
+    /*Metodo para filtrar por id*/
+    public static Product getProduct(String id){
+        return lst.stream().filter(t ->t.getId().equals(id)).findFirst().get();
+    }
+
     private static List<Product> lst = new ArrayList<>();
 
     public static List<Product> getProducts(){
@@ -14,6 +19,7 @@ public class DataHelper {
         return lst;
     }
 
+    /*Metodo añadir producto*/
     public static void add(Product p){
         lst.add(p);
     }
@@ -24,18 +30,7 @@ public class DataHelper {
                 Product aux = new Activity();
                 aux.setName("actividad"+i);
                 lst.add(aux);
-
-                Product aux = new Hotel();
-                aux.setName("hotel"+i);
-                lst.add(aux);
-
-                Product aux = new RentalCar();
-                aux.setName("rentalcar"+i);
-                lst.add(aux);
-
-                Product aux = new Restaurant();
-                aux.setName("restaurant"+i);
-                lst.add(aux);
+               // System.out.print(getProducts());
             }
         }
     }

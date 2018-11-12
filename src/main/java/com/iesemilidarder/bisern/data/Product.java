@@ -1,13 +1,22 @@
 package com.iesemilidarder.bisern.data;
 
 public abstract class Product {
+    private String id;
     private String name;
     private Double price;
     private String numPeople;
     private String place;
 
+
     private ProductType productType;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -40,4 +49,6 @@ public abstract class Product {
     public void setProductType(ProductType productType) {
         this.productType = productType;
     }
+
+
 }
