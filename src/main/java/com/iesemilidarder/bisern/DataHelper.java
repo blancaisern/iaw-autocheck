@@ -1,7 +1,6 @@
 package com.iesemilidarder.bisern;
 
-import com.iesemilidarder.bisern.data.Activity;
-import com.iesemilidarder.bisern.data.Product;
+import com.iesemilidarder.bisern.data.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +24,19 @@ public class DataHelper {
                 Product aux = new Activity();
                 aux.setName("actividad"+i);
                 lst.add(aux);
+
+                Product aux = new Hotel();
+                aux.setName("hotel"+i);
+                lst.add(aux);
+
+                Product aux = new RentalCar();
+                aux.setName("rentalcar"+i);
+                lst.add(aux);
+
+                Product aux = new Restaurant();
+                aux.setName("restaurant"+i);
+                lst.add(aux);
             }
         }
     }
-
 }
